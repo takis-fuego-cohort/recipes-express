@@ -6,5 +6,9 @@ const recipes = [
 module.exports = {
     getAll: function(){
         return recipes
+    },
+    create: function(recipeToCreate){
+        recipes.push(recipeToCreate)
+        return recipeToCreate
     }
 }

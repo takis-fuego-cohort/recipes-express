@@ -11,10 +11,10 @@ module.exports = {
     },
     create: (req, res)=>{
         // Pull in the form data
-        const recipeToCreate = req.body
+        const recipeToCreate = req.body;
         // Use the model to create based on the form data
-
+        recipe.create(recipeToCreate);
         // Send the user back to a different page
-        res.redirect('/recipes')
+        res.redirect('/recipes');
     }
 }
