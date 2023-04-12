@@ -5,5 +5,16 @@ module.exports = {
         res.render('recipes/index', {
             recipes: recipe.getAll()
         })
+    },
+    new: (req, res)=>{
+        res.render('recipes/new')
+    },
+    create: (req, res)=>{
+        // Pull in the form data
+        const recipeToCreate = req.body
+        // Use the model to create based on the form data
+
+        // Send the user back to a different page
+        res.redirect('/recipes')
     }
 }
