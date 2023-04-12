@@ -2,7 +2,11 @@ const recipe = require('../models/recipe')
 
 module.exports = {
     index: (req, res)=>{
+        // We render the index template
+        // We provide a CONTEXT object containing the recipes data
         res.render('recipes/index', {
+            // The recipe model has our data
+            // We use its methods to access the data
             recipes: recipe.getAll()
         })
     },
