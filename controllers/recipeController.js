@@ -16,5 +16,9 @@ module.exports = {
         recipe.create(recipeToCreate);
         // Send the user back to a different page
         res.redirect('/recipes');
+    },
+    delete: (req, res)=>{
+        recipe.deleteById(req.params.id)
+        res.redirect('/recipes');
     }
 }
