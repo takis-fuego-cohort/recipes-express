@@ -1,8 +1,10 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
 // imports
 const recipesRouter = require('./routes/recipesRouter')
 const logger = require('morgan')
+require('./config/database-connect')
 // 4 types of requests: GET, POST, PUT, DELETE
 // ?_method=delete POST => DELETE
 // ?_method=put POST => PUT
