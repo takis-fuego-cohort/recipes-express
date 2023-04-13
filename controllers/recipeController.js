@@ -1,5 +1,6 @@
-const recipe = require('../models/recipe')
-
+const Recipe = require('../models/recipe')
+// 7 RESTful ROUTES
+// 4 OPERATIONS CRUD
 module.exports = {
     index: (req, res)=>{
         // We render the index template
