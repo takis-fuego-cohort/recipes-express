@@ -8,11 +8,12 @@
 </head>
 <body>
     <h1>This is the recipes index!!!</h1>
-    <% recipes.forEach((recipe, index)=>{ %>
+    <p><%=JSON.stringify(recipes) %></p>
+    <% recipes.forEach((recipe)=>{ %>
         <p><%=recipe.name%></p>
         <!-- Add _method=delete to your action to make it a delete REQUEST
         This only works because of our methodOverride middleware -->
-        <form action="/recipes/<%=index%>?_method=delete" method="post">
+        <form action="/recipes/<%=recipe._id%>?_method=delete" method="post">
             <input type="submit" value="Delete">
         </form>
     <% }) %>
